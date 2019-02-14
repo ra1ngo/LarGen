@@ -1,0 +1,19 @@
+{
+    "name": "ra1ngo/largen",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Raingo",
+            "email": "raingo@list.ru"
+        }
+    ],
+    "require": {
+        "ra1ngo/php-parser-query": "dev-master",
+        "laravel/framework": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "LarGen\\": "src/"
+        }
+    }
+}
