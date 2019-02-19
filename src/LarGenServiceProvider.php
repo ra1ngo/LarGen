@@ -1,6 +1,6 @@
 <?php
 
-namespace LarGen;
+namespace Ra1ngo\LarGen;
 
 use Illuminate\Support\ServiceProvider;
 

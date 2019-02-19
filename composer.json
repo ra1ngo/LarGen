@@ -13,16 +13,16 @@
     },
     "autoload": {
         "psr-4": {
-            "LarGen\\": "src/"
+            "Ra1ngo\\LarGen\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "LarGen\\LarGenServiceProvider"
+                "Ra1ngo\\LarGen\\LarGenServiceProvider"
             ],
             "aliases": {
-                "LarGen": "LarGen\\Facades\\LarGen"
+                "LarGen": "Ra1ngo\\LarGen\\Facades\\LarGen"
             }
 
         }
