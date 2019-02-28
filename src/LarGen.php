@@ -11,13 +11,11 @@ use Illuminate\Database\Migrations\MigrationCreator;
 
 class LarGen
 {
-    protected $pQuery;
     protected $creator;
     protected $composer;
 
-    public function __construct(PQuery $pQuery, MigrationCreator $creator, Composer $composer)
+    public function __construct(MigrationCreator $creator, Composer $composer)
     {
-        $this->pQuery = $pQuery;
         $this->creator = $creator;
         $this->composer = $composer;
     }
@@ -26,6 +24,14 @@ class LarGen
     {
         $file = $this->createMigration($name);
         dd($file);
+        /*
+        $pQuery = new PQuery
+        $pQuery->parse($file);
+        $node = pQuery->find('Stmt\ClassMethod','up')->find('Expr\Closure');
+        получить $поля
+        $this->createFieldMigrationNode($node, $полe);
+        $this->createRelationMigrationNode($node, $отношение);
+        */
 
     }
 
@@ -145,4 +151,27 @@ class LarGen
 
         return $file;
     }
+
+    /*
+    protected function createIndexMigrationNode(&$node, $отношение)
+    {
+
+    }
+
+    protected function createForeignMigrationNode(&$node, $отношение)
+    {
+
+    }
+
+
+    protected function createFieldMigrationNode(&$node, $полe)
+    {
+
+    }
+
+    protected function createRelationMigrationNode(&$node, $отношение)
+    {
+
+    }
+    */
 }
